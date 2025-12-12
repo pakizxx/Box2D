@@ -1,11 +1,11 @@
 project "Box2D"
 	kind "StaticLib"
 	language "C++"
-	cppdialect "C++11"
-	staticruntime "off"
+	cppdialect "C++20"
+	staticruntime "Off"
 
-	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
-	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
+	targetdir ("bin/" .. outputdir .. "/")
+	objdir ("bin-int/" .. outputdir .. "/")
 
 	files
 	{
@@ -30,8 +30,3 @@ project "Box2D"
 	filter "configurations:Release"
 		runtime "Release"
 		optimize "on"
-
-	filter "configurations:Dist"
-		runtime "Release"
-		optimize "on"
-        symbols "off"
